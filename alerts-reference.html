@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alert notification samples for 10th NCJ website.">
+    <title>Alert Reference - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>10th NCJ</strong>
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       ALERT SAMPLES SECTION
+       ======================================== -->
+    <section class="section">
+        <div class="container">
+            <h1 class="section-title">Alert Notification Samples</h1>
+            <p class="has-text-centered"
+                style="margin-bottom: 3rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                These are static HTML samples of all alert types. Copy and paste the HTML code as needed for your pages.
+            </p>
+
+            <!-- Success Alert -->
+            <div class="box" style="margin-bottom: 2rem;">
+                <h3 class="title is-5" style="margin-bottom: 1rem;">Success Alert</h3>
+                <p class="subtitle is-6" style="margin-bottom: 1rem;">Use for successful actions like form submissions,
+                    copy operations, etc.</p>
+
+                <!-- Sample -->
+                <div class="notification-toast is-success"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">✨</div>
+                    <div class="toast-body">
+                        <strong>Success!</strong>
+                        <p>Registration data saved successfully.</p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+
+                <!-- Code -->
+                <div class="content">
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>&lt;div class="notification-toast is-success"&gt;
+    &lt;div class="toast-icon"&gt;✨&lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+        &lt;strong&gt;Success!&lt;/strong&gt;
+        &lt;p&gt;Registration data saved successfully.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="delete"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- Error Alert -->
+            <div class="box" style="margin-bottom: 2rem;">
+                <h3 class="title is-5" style="margin-bottom: 1rem;">Error Alert</h3>
+                <p class="subtitle is-6" style="margin-bottom: 1rem;">Use for errors, failed operations, or validation
+                    issues.</p>
+
+                <!-- Sample -->
+                <div class="notification-toast is-error"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">⚠️</div>
+                    <div class="toast-body">
+                        <strong>Error!</strong>
+                        <p>Failed to submit form. Please check your inputs and try again.</p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+
+                <!-- Code -->
+                <div class="content">
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>&lt;div class="notification-toast is-error"&gt;
+    &lt;div class="toast-icon"&gt;⚠️&lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+        &lt;strong&gt;Error!&lt;/strong&gt;
+        &lt;p&gt;Failed to submit form. Please check your inputs and try again.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="delete"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- Info Alert -->
+            <div class="box" style="margin-bottom: 2rem;">
+                <h3 class="title is-5" style="margin-bottom: 1rem;">Info Alert</h3>
+                <p class="subtitle is-6" style="margin-bottom: 1rem;">Use for informational messages, tips, or general
+                    notifications.</p>
+
+                <!-- Sample -->
+                <div class="notification-toast is-info"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">ℹ️</div>
+                    <div class="toast-body">
+                        <strong>Info</strong>
+                        <p>Your application is currently under review. You'll receive an email within 3-5 business days.
+                        </p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+
+                <!-- Code -->
+                <div class="content">
+                    <pre style="background: #f5f5f5; padding: 1rem; border-radius: 6px; overflow-x: auto;"><code>&lt;div class="notification-toast is-info"&gt;
+    &lt;div class="toast-icon"&gt;ℹ️&lt;/div&gt;
+    &lt;div class="toast-body"&gt;
+        &lt;strong&gt;Info&lt;/strong&gt;
+        &lt;p&gt;Your application is currently under review. You'll receive an email within 3-5 business days.&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;button class="delete"&gt;&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+
+            <!-- Additional Variants -->
+            <div class="box">
+                <h3 class="title is-5" style="margin-bottom: 1rem;">Additional Samples</h3>
+
+                <div class="notification-toast is-success"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">📋</div>
+                    <div class="toast-body">
+                        <strong>Copied!</strong>
+                        <p>CA Code has been copied to clipboard.</p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+
+                <div class="notification-toast is-error"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">❌</div>
+                    <div class="toast-body">
+                        <strong>Upload Failed</strong>
+                        <p>Image size must be less than 2MB.</p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+
+                <div class="notification-toast is-info"
+                    style="position: relative; top: 0; right: 0; margin-bottom: 1rem;">
+                    <div class="toast-icon">🔔</div>
+                    <div class="toast-body">
+                        <strong>Reminder</strong>
+                        <p>Registration closes on February 20, 2026.</p>
+                    </div>
+                    <button class="delete"></button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

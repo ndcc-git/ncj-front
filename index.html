@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="10th NCJ - Notre Dame Cultural Festival. Experience the vibrant cultural celebration with music, dance, drama, and art.">
+  <title>10th NCJ - Notre Dame Cultural Festival</title>
+
+  <!-- Bulma CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item" href="index.html">
+          <!-- <strong>10th NCJ</strong> -->
+           <img src="assets/images/logo.png" alt="">
+        </a>
+
+        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="navbarMenu" class="navbar-menu">
+        <div class="navbar-start">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="#about">About</a>
+          <a class="navbar-item" href="gallery.html">Gallery</a>
+          <a class="navbar-item" href="#contact">Contact</a>
+          <a class="navbar-item" href="events.html">Events</a>
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a class="button is-secondary mr-2" href="ca-register.html">
+              <strong>Become a CA</strong>
+            </a>
+            <a class="button is-primary" href="register.html">
+              <strong>Register</strong>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========================================
+       HERO SECTION
+       ======================================== -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="columns is-vcentered">
+        <div class="column is-6">
+          <h1 class="hero-title animate-on-scroll">10TH<br>NCJ</h1>
+          <p class="subtitle is-4 animate-on-scroll">Notre Dame Cultural Club</p>
+          <p class="animate-on-scroll">Join us for an unforgettable celebration of culture, creativity, and community.
+          </p>
+          <div class="buttons animate-on-scroll" style="margin-top: 2rem;">
+            <a href="events.html" class="button is-primary is-large">Explore Events</a>
+            <a href="#contact" class="button is-secondary is-large">Get in Touch</a>
+          </div>
+        </div>
+        <div class="column is-6">
+          <div class="hero-artwork parallax-element animate-on-scroll">
+            <img src="assets/images/hero-art.png" alt="10th NCJ Festival Artwork" id="hero-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       COUNTDOWN TIMER
+       ======================================== -->
+  <section class="countdown-section">
+    <div class="container">
+      <h2 class="section-title has-text-white">Event Starts In</h2>
+      <div class="countdown-container">
+        <div class="countdown-card animate-on-scroll">
+          <span id="countdown-days" class="countdown-number">00</span>
+          <span class="countdown-label">Days</span>
+        </div>
+        <div class="countdown-card animate-on-scroll">
+          <span id="countdown-hours" class="countdown-number">00</span>
+          <span class="countdown-label">Hours</span>
+        </div>
+        <div class="countdown-card animate-on-scroll">
+          <span id="countdown-minutes" class="countdown-number">00</span>
+          <span class="countdown-label">Minutes</span>
+        </div>
+        <div class="countdown-card animate-on-scroll">
+          <span id="countdown-seconds" class="countdown-number">00</span>
+          <span class="countdown-label">Seconds</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================
+       ABOUT SECTION
+       ======================================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">About 10th NCJ</h2>
+      <div class="content is-medium has-text-centered animate-on-scroll" style="max-width: 800px; margin: 0 auto;">
+        <p>
+          The National Cultural Jubilation (NCJ) is a vibrant celebration of art, music, dance, and drama.
+          As we mark our 10th edition, we invite you to be part of this incredible journey. Experience
+          the energy, passion, and creativity that define our cultural festival.
+        </p>
+      </div>
+    </div>
+  </section>
+
+
+    <!-- ========================================
+       TICKET SECTION
+       ======================================== -->
+  <div class="is-flex is-justify-content-center is-align-items-center m-5 p-0">
+
+    <div class="hover-3d m-0 p-0">
+      <figure class="image is-256x256 m-0">
+        <img src="assets/images/ticket.png" alt="3D card" style="border-radius:1.5rem;">
+      </figure>
+
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+  </div>
+
+  <!-- ========================================
+       SPONSORS MARQUEE
+       ======================================== -->
+  <section class="marquee-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Our Sponsors</h2>
+    </div>
+    <div class="marquee-container">
+      <div class="marquee-content">
+        <div class="marquee-item"><img src="assets/images/sponsor1.png" alt="Sponsor 1"></div>
+        <div class="marquee-item"><img src="assets/images/sponsor2.png" alt="Sponsor 2"></div>
+        <div class="marquee-item"><img src="assets/images/sponsor3.png" alt="Sponsor 3"></div>
+        <div class="marquee-item"><img src="assets/images/sponsor4.png" alt="Sponsor 4"></div>
+        <div class="marquee-item"><img src="assets/images/sponsor5.png" alt="Sponsor 5"></div>
+        <div class="marquee-item"><img src="assets/images/sponsor6.png" alt="Sponsor 6"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       SIGNATURE EVENTS
+       ======================================== -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Signature Events</h2>
+      <div class="columns is-multiline">
+        <div class="column is-4">
+          <div class="event-card animate-on-scroll">
+            <img src="assets/images/event-music.jpg" alt="Battle of Bands" class="event-card-image">
+            <div class="event-card-content">
+              <h3 class="event-card-title">Battle of Bands</h3>
+              <p class="event-card-type">Team Event</p>
+              <div class="event-card-actions">
+                <a href="event-details.html" class="button is-secondary">Explore</a>
+                <a href="register.html" class="button is-primary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="event-card animate-on-scroll">
+            <img src="assets/images/event-dance.jpg" alt="Dance Competition" class="event-card-image">
+            <div class="event-card-content">
+              <h3 class="event-card-title">Dance Competition</h3>
+              <p class="event-card-type">Solo/Team Event</p>
+              <div class="event-card-actions">
+                <a href="event-details.html" class="button is-secondary">Explore</a>
+                <a href="register.html" class="button is-primary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="column is-4">
+          <div class="event-card animate-on-scroll">
+            <img src="assets/images/event-drama.jpg" alt="Drama Festival" class="event-card-image">
+            <div class="event-card-content">
+              <h3 class="event-card-title">Drama Festival</h3>
+              <p class="event-card-type">Team Event</p>
+              <div class="event-card-actions">
+                <a href="event-details.html" class="button is-secondary">Explore</a>
+                <a href="register.html" class="button is-primary">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="has-text-centered" style="margin-top: 2rem;">
+        <a href="events.html" class="button is-primary is-large">View All Events</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FAQ SECTION
+       ======================================== -->
+  <section class="faq-section">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Frequently Asked Questions</h2>
+      <div class="animate-on-scroll" style="max-width: 800px; margin: 0 auto;">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What is NCJ?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Notre Dame Cultural Junction (NCJ) is an annual cultural festival organized by the Notre Dame Cultural
+              Club, celebrating art, music, dance, and drama.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>When and where is the event?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>The 10th NCJ will be held in February 2026 at Notre Dame College. Exact dates and venues will be
+              announced soon.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>How do I register?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>You can register online through our website by clicking the "Register" button. Choose your event category
+              and fill in the required details.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>What are the participation fees?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Participation fees vary by event category. Please check individual event pages for specific fee
+              information.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>Can I participate in multiple events?</span>
+            <span class="faq-chevron">▼</span>
+          </div>
+          <div class="faq-answer">
+            <p>Yes! Participants are welcome to register for multiple events, subject to scheduling constraints.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       CONTACT & LOCATION
+       ======================================== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Get in Touch</h2>
+      <div class="columns">
+
+        <!-- Contact Form -->
+        <div class="column is-6">
+          <form class="contact-form animate-on-scroll" id="contact-form">
+            <div class="field">
+              <label class="label">Name *</label>
+              <div class="control">
+                <input class="input" type="text" id="contact-name" placeholder="Your Name" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Institution</label>
+              <div class="control">
+                <input class="input" type="text" id="contact-institution" placeholder="Your Institution">
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Email *</label>
+              <div class="control">
+                <input class="input" type="email" id="contact-email" placeholder="your@email.com" required>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label">Message *</label>
+              <div class="control">
+                <textarea class="textarea" id="contact-message" placeholder="Your message..." rows="5"
+                  required></textarea>
+              </div>
+            </div>
+
+            <div class="control">
+              <button type="submit" class="button is-primary is-fullwidth">Send Message</button>
+            </div>
+          </form>
+        </div>
+
+        <!-- Map -->
+        <div class="column is-6">
+          <div class="map-container animate-on-scroll">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9067834633866!2d90.38884831498207!3d23.750881094586844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8bda40a2647%3A0x4e912105a7c888a8!2sNotre%20Dame%20College!5e0!3m2!1sen!2sbd!4v1234567890123!5m2!1sen!2sbd"
+              allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       FOOTER
+       ======================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="columns">
+
+        <!-- About Column -->
+        <div class="column is-4">
+          <h3 class="footer-title">10th NCJ</h3>
+          <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="column is-4">
+          <h3 class="footer-title">Quick Links</h3>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="events.html">Events</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#">Developer</a></li>
+          </ul>
+        </div>
+
+        <!-- Social Media -->
+        <div class="column is-4">
+          <h3 class="footer-title">Follow Us</h3>
+          <div class="social-icons">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="copyright">
+        <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

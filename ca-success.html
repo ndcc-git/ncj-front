@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Campus Ambassador application successful for 10th NCJ.">
+    <title>CA Application Successful - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>10th NCJ</strong>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                    <a class="navbar-item" href="events.html">Events</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-primary" href="register.html">
+                            <strong>Register</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       SUCCESS HEADER
+       ======================================== -->
+    <section class="section" style="padding-top: 3rem;">
+        <div class="container">
+
+            <!-- Success Message -->
+            <div class="has-text-centered animate-on-scroll" style="margin-bottom: 2rem;">
+                <h1 class="title is-1" style="color: var(--text-primary);">Campus Ambassador Application Successful! 🎉
+                </h1>
+                <p class="subtitle is-4">Congratulations on joining our team!</p>
+            </div>
+
+            <!-- Dashboard Card -->
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="dashboard-card animate-on-scroll">
+
+                        <div class="columns">
+
+                            <!-- Left: Profile + Application Details -->
+                            <div class="column is-6">
+                                <!-- Profile Section -->
+                                <div class="dashboard-profile" style="margin-bottom: 2rem;">
+                                    <img src="https://ui-avatars.com/api/?name=Sarah+Khan&size=100&background=f097c3&color=fff&bold=true"
+                                        alt="Profile Picture" class="dashboard-avatar">
+                                    <div class="dashboard-info">
+                                        <h3>Sarah Khan</h3>
+                                        <span class="status-pill approved">Approved</span>
+                                    </div>
+                                </div>
+
+                                <!-- Application Details -->
+                                <div>
+                                    <h4 class="title is-5" style="margin-bottom: 1rem; text-transform: uppercase;">
+                                        Application Details</h4>
+                                    <div class="receipt-row">
+                                        <span class="receipt-label">Email:</span>
+                                        <span class="receipt-value">sarah.khan@example.com</span>
+                                    </div>
+                                    <div class="receipt-row">
+                                        <span class="receipt-label">Phone:</span>
+                                        <span class="receipt-value">+880 123 456 7890</span>
+                                    </div>
+                                    <div class="receipt-row">
+                                        <span class="receipt-label">Institution:</span>
+                                        <span class="receipt-value">Notre Dame College</span>
+                                    </div>
+                                    <div class="receipt-row">
+                                        <span class="receipt-label">Class:</span>
+                                        <span class="receipt-value">12th Grade</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: CA Code Hero -->
+                            <div class="column is-6">
+                                <div class="ca-code-hero">
+                                    <div class="ca-code-label">Your CA Code</div>
+                                    <div class="ca-code-display" id="ca-code-text">ABCD</div>
+                                    <button class="copy-button" id="copy-ca-code">
+                                        <i class="fas fa-copy"></i> Copy CA Code
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- What's Next Section -->
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="box animate-on-scroll" style="background-color: rgba(252, 251, 229, 0.5);">
+
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-rocket" style="font-size: 2rem; color: var(--secondary-accent);"></i>
+                            <h3 class="title is-4" style="margin: 0;">What's Next?</h3>
+                        </div>
+
+                        <ul class="timeline-list">
+                            <li class="timeline-item">
+                                <i class="timeline-icon fas fa-check-circle"></i>
+                                <div class="timeline-content">
+                                    <h4>Application Status: Approved</h4>
+                                    <p>Your application has been reviewed and approved. Welcome to the team!</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <i class="timeline-icon fas fa-envelope"></i>
+                                <div class="timeline-content">
+                                    <h4>Email Confirmation</h4>
+                                    <p>You'll receive a detailed email with your CA welcome kit and guidelines within 24
+                                        hours.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <i class="timeline-icon fas fa-clock"></i>
+                                <div class="timeline-content">
+                                    <h4>Review Time</h4>
+                                    <p>Applications are typically reviewed within 3-5 business days.</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <i class="timeline-icon fas fa-gift"></i>
+                                <div class="timeline-content">
+                                    <h4>CA Perks</h4>
+                                    <p>Welcome Kit • Guidelines Document • CA Portal Access • Exclusive Merchandise</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <!-- Action Buttons -->
+                        <div
+                            style="margin-top: 2rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                            <a href="index.html" class="button is-primary">
+                                <i class="fas fa-home"></i>&nbsp; Back to Home
+                            </a>
+                            <a href="ca-register.html" class="button is-secondary">
+                                <i class="fas fa-user-plus"></i>&nbsp; Apply for a Friend
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Use Your CA Code -->
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="box animate-on-scroll">
+
+                        <div style="text-align: center; margin-bottom: 2rem;">
+                            <i class="fas fa-map-pin"
+                                style="font-size: 2.5rem; color: var(--secondary-accent); margin-bottom: 0.5rem;"></i>
+                            <h3 class="title is-4">How to Use Your CA Code</h3>
+                            <p class="subtitle is-6" style="margin-top: 0.5rem;">Share your code and earn rewards!</p>
+                        </div>
+
+                        <!-- Steps Grid -->
+                        <div class="steps-grid">
+
+                            <!-- Step 1: Share -->
+                            <div class="step-card">
+                                <i class="step-icon fas fa-share-alt"></i>
+                                <div class="step-title">Share Your Code</div>
+                                <p class="step-description">Share your CA code with students from other institutions.
+                                </p>
+                            </div>
+
+                            <!-- Step 2: Track -->
+                            <div class="step-card">
+                                <i class="step-icon fas fa-chart-line"></i>
+                                <div class="step-title">Track Registrations</div>
+                                <p class="step-description">Monitor how many people register using your code in the CA
+                                    portal.</p>
+                            </div>
+
+                            <!-- Step 3: Earn -->
+                            <div class="step-card">
+                                <i class="step-icon fas fa-gift"></i>
+                                <div class="step-title">Earn Rewards</div>
+                                <p class="step-description">Get points and exclusive perks for each successful
+                                    registration.</p>
+                            </div>
+
+                            <!-- Step 4: Certificate -->
+                            <div class="step-card">
+                                <i class="step-icon fas fa-award"></i>
+                                <div class="step-title">Get Certificate</div>
+                                <p class="step-description">Receive an official CA certificate at the end of the event.
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+
+                <!-- About Column -->
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Copy CA Code Functionality -->
+    <script>
+        document.getElementById('copy-ca-code').addEventListener('click', function () {
+            const caCode = document.getElementById('ca-code-text').textContent;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(caCode).then(function () {
+                // Update button text
+                const button = document.getElementById('copy-ca-code');
+                const originalHTML = button.innerHTML;
+                button.innerHTML = '<i class="fas fa-check"></i> Copied!';
+
+                // Reset button after 2 seconds
+                setTimeout(function () {
+                    button.innerHTML = originalHTML;
+                }, 2000);
+            }).catch(function (err) {
+                console.error('Failed to copy: ', err);
+                alert('Failed to copy CA code. Please copy manually: ' + caCode);
+            });
+        });
+    </script>
+
+</body>
+
+</html>

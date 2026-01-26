@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Apply to become a Campus Ambassador for 10th NCJ.">
+    <title>CA Registration - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>10th NCJ</strong>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                    <a class="navbar-item" href="events.html">Events</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-primary" href="register.html">
+                            <strong>Register</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       CA REGISTRATION HERO
+       ======================================== -->
+    <section class="hero is-medium"
+        style="background: linear-gradient(to bottom, var(--primary-accent) 0%, var(--primary-accent) 40%, var(--secondary-accent) 70%, var(--bg-primary) 100%);">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 animate-on-scroll"
+                    style="color: var(--text-primary); font-size: 4rem; font-weight: 900;">
+                    CAMPUS AMBASSADOR
+                </h1>
+                <p class="subtitle is-4 animate-on-scroll" style="color: var(--text-primary);">
+                    Join Our Team • Represent 10th NCJ
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       CA APPLICATION FORM
+       ======================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-half-desktop">
+
+                    <div class="box animate-on-scroll"
+                        style="background-color: rgba(252, 251, 229, 0.7); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); border: 2px solid var(--text-primary); border-radius: var(--border-radius);">
+                        <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Campus Ambassador
+                            Application
+                        </h2>
+
+                        <form id="ca-registration-form">
+
+                            <!-- Profile Picture Upload -->
+                            <div class="field">
+                                <div class="profile-preview-container">
+                                    <div class="profile-preview" id="profile-preview">
+                                        <span class="profile-preview-placeholder">👤</span>
+                                    </div>
+                                    <div class="control">
+                                        <div class="file has-name is-boxed is-centered">
+                                            <label class="file-label">
+                                                <input class="file-input" type="file" id="profile-picture"
+                                                    accept="image/*">
+                                                <span class="file-cta">
+                                                    <span class="file-icon">
+                                                        <i class="fas fa-upload"></i>
+                                                    </span>
+                                                    <span class="file-label">
+                                                        Upload Profile Picture
+                                                    </span>
+                                                </span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Full Name -->
+                            <div class="field">
+                                <label class="label">Full Name *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="ca-full-name" placeholder="Your Full Name"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Institution -->
+                            <div class="field">
+                                <label class="label">Institution *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="ca-institution"
+                                        placeholder="School/College/University" required>
+                                </div>
+                            </div>
+
+                            <!-- Class/Year -->
+                            <div class="field">
+                                <label class="label">Class/Year *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="ca-class"
+                                        placeholder="e.g., 12th Grade or 2nd Year" required>
+                                </div>
+                            </div>
+
+                            <!-- Email Address -->
+                            <div class="field">
+                                <label class="label">Email Address *</label>
+                                <div class="control">
+                                    <input class="input" type="email" id="ca-email" placeholder="your@email.com"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Phone Number -->
+                            <div class="field">
+                                <label class="label">Phone Number *</label>
+                                <div class="control">
+                                    <input class="input" type="tel" id="ca-phone" placeholder="+880 123 456 7890"
+                                        required>
+                                </div>
+                            </div>
+
+                            <!-- Motivation -->
+                            <div class="field">
+                                <label class="label">Why do you want to be a CA? *</label>
+                                <div class="control">
+                                    <textarea class="textarea" id="ca-motivation"
+                                        placeholder="Tell us about your motivation, skills, and how you can contribute to promoting 10th NCJ..."
+                                        rows="5" required></textarea>
+                                </div>
+                                <p class="help">Minimum 100 characters</p>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="ca-terms" required>
+                                        I agree to the <a href="#">CA terms and conditions</a> *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit" class="button is-primary is-fullwidth is-large">
+                                        <i class="fas fa-paper-plane"></i>&nbsp; Apply Now
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- CA Benefits Info -->
+                    <div class="notification is-info is-light animate-on-scroll" style="margin-top: 2rem;">
+                        <h3 class="title is-5">Campus Ambassador Benefits:</h3>
+                        <ul>
+                            <li>🎁 Exclusive Welcome Kit & Merchandise</li>
+                            <li>🏆 Certificate of Recognition</li>
+                            <li>🎫 Free Entry & Special Perks at Events</li>
+                            <li>📊 Access to CA Portal & Analytics Dashboard</li>
+                            <li>🌟 Rewards for Top Performers</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+
+                <!-- About Column -->
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- CA Form Handler -->
+    <script>
+        // Profile Picture Preview
+        document.getElementById('profile-picture').addEventListener('change', function (e) {
+            const file = e.target.files[0];
+            const preview = document.getElementById('profile-preview');
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    preview.innerHTML = `<img src="${e.target.result}" alt="Profile Preview">`;
+                };
+                reader.readAsDataURL(file);
+            }
+        });
+
+        // Form Submission
+        document.getElementById('ca-registration-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const formData = {
+                fullName: document.getElementById('ca-full-name').value,
+                institution: document.getElementById('ca-institution').value,
+                class: document.getElementById('ca-class').value,
+                email: document.getElementById('ca-email').value,
+                phone: document.getElementById('ca-phone').value,
+                motivation: document.getElementById('ca-motivation').value
+            };
+
+            // Validate motivation length
+            if (formData.motivation.length < 100) {
+                alert('Please write at least 100 characters for your motivation.');
+                return;
+            }
+
+            // Here you would typically send the data to a backend
+            console.log('CA Application submitted:', formData);
+
+            // Redirect to success page
+            window.location.href = 'ca-success.html';
+        });
+    </script>
+
+</body>
+
+</html>

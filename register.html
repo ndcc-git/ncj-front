@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Register for the 10th NCJ Cultural Festival events.">
+    <title>Register - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>10th NCJ</strong>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                    <a class="navbar-item" href="events.html">Events</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-primary" href="register.html">
+                            <strong>Register</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       REGISTER HERO
+       ======================================== -->
+    <section class="hero is-medium"
+        style="background: linear-gradient(to bottom, var(--primary-accent) 0%, var(--primary-accent) 40%, var(--secondary-accent) 70%, var(--bg-primary) 100%);">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <h1 class="title is-1 animate-on-scroll"
+                    style="color: var(--text-primary); font-size: 4rem; font-weight: 900;">
+                    REGISTER
+                </h1>
+                <p class="subtitle is-4 animate-on-scroll" style="color: var(--text-primary);">
+                    Join the Cultural Revolution
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       REGISTRATION FORM
+       ======================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-8">
+
+                    <div class="box animate-on-scroll"
+                        style="background-color: rgba(252, 251, 229, 0.7); backdrop-filter: blur(10px); box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); border: 2px solid var(--text-primary); border-radius: var(--border-radius);">
+                        <h2 class="title is-3 has-text-centered" style="margin-bottom: 2rem;">Event Registration Form
+                        </h2>
+
+                        <form id="registration-form">
+
+                            <!-- Participant Type -->
+                            <div class="field">
+                                <label class="label">Participation Type *</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="participation-type" required>
+                                            <option value="">Select participation type</option>
+                                            <option value="solo">Solo</option>
+                                            <option value="duo">Duo</option>
+                                            <option value="team">Team</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Event Category -->
+                            <div class="field">
+                                <label class="label">Event Category *</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="event-category" required>
+                                            <option value="">Select event category</option>
+                                            <option value="music">Music</option>
+                                            <option value="dance">Dance</option>
+                                            <option value="drama">Drama</option>
+                                            <option value="art">Art</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Specific Event -->
+                            <div class="field">
+                                <label class="label">Event Name *</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="event-name" required>
+                                            <option value="">Select specific event</option>
+                                            <option value="battle-of-bands">Battle of Bands</option>
+                                            <option value="solo-singing">Solo Singing</option>
+                                            <option value="instrumental">Instrumental</option>
+                                            <option value="group-dance">Group Dance</option>
+                                            <option value="solo-dance">Solo Dance</option>
+                                            <option value="stage-drama">Stage Drama</option>
+                                            <option value="painting">Painting</option>
+                                            <option value="photography">Photography</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team/Individual Name -->
+                            <div class="field">
+                                <label class="label">Team/Individual Name *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="team-name"
+                                        placeholder="e.g., The Rockstars or John Doe" required>
+                                </div>
+                            </div>
+
+                            <!-- Leader Name -->
+                            <div class="field">
+                                <label class="label">Leader/Participant Name *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="leader-name" placeholder="Full Name" required>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="field">
+                                <label class="label">Email *</label>
+                                <div class="control">
+                                    <input class="input" type="email" id="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+
+                            <!-- Phone -->
+                            <div class="field">
+                                <label class="label">Phone Number *</label>
+                                <div class="control">
+                                    <input class="input" type="tel" id="phone" placeholder="+880 123 456 7890" required>
+                                </div>
+                            </div>
+
+                            <!-- Institution -->
+                            <div class="field">
+                                <label class="label">Institution *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="institution"
+                                        placeholder="School/College/University" required>
+                                </div>
+                            </div>
+
+                            <!-- Number of Members -->
+                            <div class="field" id="team-size-field">
+                                <label class="label">Number of Team Members</label>
+                                <div class="control">
+                                    <input class="input" type="number" id="team-size" placeholder="e.g., 5" min="1"
+                                        max="20">
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div class="field">
+                                <label class="label">Additional Information</label>
+                                <div class="control">
+                                    <textarea class="textarea" id="additional-info"
+                                        placeholder="Any special requirements or notes..." rows="4"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Terms and Conditions -->
+                            <div class="field">
+                                <div class="control">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="terms" required>
+                                        I agree to the <a href="#">terms and conditions</a> *
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="field">
+                                <div class="control">
+                                    <button type="submit" class="button is-primary is-fullwidth is-large">
+                                        <i class="fas fa-check-circle"></i>&nbsp; Submit Registration
+                                    </button>
+                                </div>
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                    <!-- Important Notes -->
+                    <div class="notification is-info is-light animate-on-scroll" style="margin-top: 2rem;">
+                        <h3 class="title is-5">Important Notes:</h3>
+                        <ul>
+                            <li>📋 Registration fees must be paid within 48 hours of submission</li>
+                            <li>🎫 Confirmation will be sent to your registered email</li>
+                            <li>📞 For queries, contact: +880 123 456 7890</li>
+                            <li>⏰ Registration closes on February 20, 2026</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+
+                <!-- About Column -->
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- Registration Form Handler -->
+    <script>
+        document.getElementById('registration-form').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const formData = {
+                participationType: document.getElementById('participation-type').value,
+                eventCategory: document.getElementById('event-category').value,
+                eventName: document.getElementById('event-name').value,
+                teamName: document.getElementById('team-name').value,
+                leaderName: document.getElementById('leader-name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                institution: document.getElementById('institution').value,
+                teamSize: document.getElementById('team-size').value,
+                additionalInfo: document.getElementById('additional-info').value
+            };
+
+            // Here you would typically send the data to a backend
+            console.log('Registration submitted:', formData);
+
+            // Show success message
+            alert('Thank you for registering! You will receive a confirmation email shortly.');
+
+            // Reset form
+            this.reset();
+        });
+
+        // Show/hide team size field based on participation type
+        document.getElementById('participation-type').addEventListener('change', function () {
+            const teamSizeField = document.getElementById('team-size-field');
+            if (this.value === 'team') {
+                teamSizeField.style.display = 'block';
+                document.getElementById('team-size').required = true;
+            } else {
+                teamSizeField.style.display = 'none';
+                document.getElementById('team-size').required = false;
+            }
+        });
+    </script>
+
+</body>
+
+</html>

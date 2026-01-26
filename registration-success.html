@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Registration successful for 10th NCJ.">
+    <title>Registration Successful - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <strong>10th NCJ</strong>
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                    <a class="navbar-item" href="events.html">Events</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <a class="button is-primary" href="register.html">
+                            <strong>Register</strong>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       SUCCESS HEADER
+       ======================================== -->
+    <section class="section" style="padding-top: 3rem;">
+        <div class="container">
+
+            <!-- Success Message -->
+            <div class="has-text-centered animate-on-scroll" style="margin-bottom: 2rem;">
+                <div style="font-size: 4rem; margin-bottom: 1rem;">🎉</div>
+                <h1 class="title is-1" style="color: var(--text-primary);">Registration Successful!</h1>
+                <p class="subtitle is-4">Thank you, <strong>Rafid Ahmed</strong></p>
+                <div class="registration-id-badge">ID: NCJ2026-6974</div>
+            </div>
+
+            <!-- Registration Receipt Card -->
+            <div class="columns is-centered">
+                <div class="column is-10">
+                    <div class="receipt-card animate-on-scroll">
+
+                        <!-- Header -->
+                        <div class="receipt-header">
+                            <i class="fas fa-receipt" style="font-size: 1.5rem; color: var(--secondary-accent);"></i>
+                            <h3>Registration Receipt</h3>
+                        </div>
+
+                        <!-- Content Grid -->
+                        <div class="columns">
+
+                            <!-- Left Column: Details -->
+                            <div class="column is-7">
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Email Address:</span>
+                                    <span class="receipt-value">rafid.ahmed@example.com</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Segment:</span>
+                                    <span class="receipt-value">Team Event</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Category:</span>
+                                    <span class="receipt-value">Music - Battle of Bands</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Institution:</span>
+                                    <span class="receipt-value">Notre Dame College</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">CA Reference:</span>
+                                    <span class="receipt-value">ABCD</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Transaction ID:</span>
+                                    <span class="receipt-value">TXN2026-ABC-1234</span>
+                                </div>
+                                <div class="receipt-row">
+                                    <span class="receipt-label">Submission Link:</span>
+                                    <span class="receipt-value"><a href="#" style="color: var(--secondary-accent);">View
+                                            Submission</a></span>
+                                </div>
+                            </div>
+
+                            <!-- Right Column: QR Code -->
+                            <div class="column is-5">
+                                <div class="qr-code-container">
+                                    <img src="assets/images/qr-code-placeholder.svg" alt="Registration QR Code">
+                                    <p class="qr-code-label">Scan for Verification</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Status Box -->
+                        <div class="receipt-status-box">
+                            <div class="receipt-status-icon">⏳</div>
+                            <div class="receipt-status-text">Status: Registration Verified</div>
+                            <div class="receipt-status-helper">Check your email for payment instructions and further
+                                details.</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Actions -->
+            <div class="action-footer animate-on-scroll">
+                <a href="index.html" class="action-link">
+                    <i class="fas fa-home"></i>
+                    <span>Home</span>
+                </a>
+                <a href="register.html" class="action-link">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>Register Another</span>
+                </a>
+                <a href="#" class="action-link" onclick="window.print(); return false;">
+                    <i class="fas fa-print"></i>
+                    <span>Print / Download PDF</span>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+
+                <!-- About Column -->
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#">Developers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
