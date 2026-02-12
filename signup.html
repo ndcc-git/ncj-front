@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign up for 10th NCJ - Notre Dame Cultural Festival">
+    <title>Sign Up - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR (Same as index.html)
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/images/logo.png" alt="10th NCJ Logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="executives.html">Executives</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="navbar-auth-group auth-guest" id="auth-guest">
+                            <a class="button is-text-link" href="signin.html">Sign In</a>
+                            <a class="button is-primary" href="signup.html">
+                                <strong>Sign Up</strong>
+                            </a>
+                        </div>
+
+                        <div class="navbar-auth-group auth-logged-in" id="auth-logged-in">
+                            <a class="navbar-profile-link" href="profile.html">
+                                <i class="fas fa-user-circle"></i>
+                                <span>My Profile</span>
+                            </a>
+                            <a class="button is-outlined-custom" onclick="handleLogout()">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       SIGN UP SECTION - Split Screen
+       ======================================== -->
+    <div class="auth-split-container">
+        <!-- Left Panel - Decorative -->
+        <div class="auth-decorative-panel" style="flex: 0 0 40%;">
+            <div style="max-width: 400px;">
+                <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/cultural_pattern_decorative_1770903173647.png"
+                    alt="Cultural Pattern">
+            </div>
+        </div>
+
+        <!-- Right Panel - Form -->
+        <div class="auth-form-panel" style="flex: 1;">
+            <div style="max-width: 600px; width: 100%;">
+                <h1 class="auth-card-title">Create Your Account</h1>
+                <p class="auth-card-subtitle">Join us for the 10th NCJ celebration</p>
+
+                <form class="auth-form" id="signup-form">
+                    <div class="columns is-multiline">
+                        <!-- Full Name -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-user"></i> Full Name *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="fullname" placeholder="Enter your full name"
+                                        required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Institution -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-school"></i> Institution *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="institution" placeholder="Your institution"
+                                        list="institutions" required>
+                                    <datalist id="institutions">
+                                        <option value="Notre Dame College">
+                                        <option value="Dhaka College">
+                                        <option value="Adamjee Cantonment College">
+                                        <option value="Viqarunnisa Noon School and College">
+                                        <option value="Other">
+                                    </datalist>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Class -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-graduation-cap"></i> Class *</label>
+                                <div class="control">
+                                    <div class="select is-fullwidth">
+                                        <select id="class" required>
+                                            <option value="">Select class</option>
+                                            <option value="1">Class 1</option>
+                                            <option value="2">Class 2</option>
+                                            <option value="3">Class 3</option>
+                                            <option value="4">Class 4</option>
+                                            <option value="5">Class 5</option>
+                                            <option value="6">Class 6</option>
+                                            <option value="7">Class 7</option>
+                                            <option value="8">Class 8</option>
+                                            <option value="9">Class 9</option>
+                                            <option value="10">Class 10</option>
+                                            <option value="11">Class 11</option>
+                                            <option value="12">Class 12</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mobile -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-phone"></i> Mobile *</label>
+                                <div class="control">
+                                    <input class="input" type="tel" id="mobile" placeholder="01XXXXXXXXX"
+                                        pattern="[0-9]{11}" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="column is-12">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-map-marker-alt"></i> Address *</label>
+                                <div class="control">
+                                    <input class="input" type="text" id="address" placeholder="Your address" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-envelope"></i> Email *</label>
+                                <div class="control">
+                                    <input class="input" type="email" id="email" placeholder="your@email.com" required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Facebook Link -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fab fa-facebook"></i> Facebook Profile</label>
+                                <div class="control">
+                                    <input class="input" type="url" id="facebook"
+                                        placeholder="https://facebook.com/yourprofile">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-lock"></i> Password *</label>
+                                <div class="control password-toggle">
+                                    <input class="input" type="password" id="password"
+                                        placeholder="Create a strong password" required>
+                                    <span class="toggle-icon" onclick="togglePasswordVisibility('password')">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <div class="password-strength">
+                                    <div class="password-strength-bar" id="password-strength-bar"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password -->
+                        <div class="column is-6">
+                            <div class="field">
+                                <label class="label"><i class="fas fa-lock"></i> Confirm Password *</label>
+                                <div class="control password-toggle">
+                                    <input class="input" type="password" id="confirm-password"
+                                        placeholder="Re-enter your password" required>
+                                    <span class="toggle-icon" onclick="togglePasswordVisibility('confirm-password')">
+                                        <i class="fas fa-eye"></i>
+                                    </span>
+                                </div>
+                                <small class="help" id="password-match-msg"></small>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <div class="field" style="margin-top: 1.5rem;">
+                        <div class="control">
+                            <button type="submit" class="button is-primary is-fullwidth is-medium">
+                                <strong>Create Account</strong>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Footer Link -->
+                    <div class="auth-footer-link">
+                        Already have an account? <a href="signin.html">Sign In</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>

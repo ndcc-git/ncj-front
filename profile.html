@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your profile dashboard - 10th NCJ">
+    <title>My Profile - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/images/logo.png" alt="10th NCJ Logo">
+                </a>
+            </div>
+
+            <div class="navbar-end" style="margin-right: 1rem;">
+                <div class="navbar-item">
+                    <div class="navbar-auth-group auth-logged-in active">
+                        <a class="navbar-profile-link" href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a class="button is-outlined-custom" onclick="handleLogout()">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       PROFILE HEADER
+       ======================================== -->
+    <section class="profile-header">
+        <div class="container">
+            <div class="profile-header-content">
+                <div class="profile-info">
+                    <h1 id="profile-name">John Doe</h1>
+                    <p id="profile-institution">Notre Dame College</p>
+                </div>
+                <div>
+                    <a href="profile-edit.html" class="button is-primary">
+                        <i class="fas fa-edit"></i>&nbsp; Edit Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       PERSONAL INFORMATION
+       ======================================== -->
+    <section class="section">
+        <div class="container">
+            <div class="profile-section">
+                <h2 class="profile-section-title">Personal Information</h2>
+                <div class="profile-detail-grid">
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Full Name</span>
+                        <span class="profile-detail-value" id="detail-name">John Doe</span>
+                    </div>
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Email</span>
+                        <span class="profile-detail-value" id="detail-email">john@example.com</span>
+                    </div>
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Mobile</span>
+                        <span class="profile-detail-value" id="detail-mobile">01712345678</span>
+                    </div>
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Institution</span>
+                        <span class="profile-detail-value" id="detail-institution">Notre Dame College</span>
+                    </div>
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Class</span>
+                        <span class="profile-detail-value" id="detail-class">12</span>
+                    </div>
+                    <div class="profile-detail-item">
+                        <span class="profile-detail-label">Address</span>
+                        <span class="profile-detail-value" id="detail-address">Dhaka, Bangladesh</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       MY REGISTRATIONS
+       ======================================== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="profile-section">
+                <h2 class="profile-section-title">My Event Registrations</h2>
+
+                <div class="registration-card">
+                    <div class="registration-card-header">
+                        <h3 class="registration-card-title">Battle of Bands</h3>
+                        <span class="badge confirmed">Confirmed</span>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Team Event • Music Competition</p>
+                    <button class="button is-primary">
+                        <i class="fas fa-download"></i>&nbsp; Download Ticket
+                    </button>
+                </div>
+
+                <div class="registration-card">
+                    <div class="registration-card-header">
+                        <h3 class="registration-card-title">Dance Competition</h3>
+                        <span class="badge pending">Pending</span>
+                    </div>
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem;">Solo Event • Dance Battle</p>
+                    <button class="button is-primary" disabled>
+                        Pending Confirmation
+                    </button>
+                </div>
+
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="events.html" class="button is-outlined-custom">
+                        <i class="fas fa-plus"></i>&nbsp; Register for More Events
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       CA APPLICATION STATUS
+       ======================================== -->
+    <section class="section" style="padding-top: 0;">
+        <div class="container">
+            <div class="profile-section">
+                <h2 class="profile-section-title">Campus Ambassador Status</h2>
+
+                <!-- If not applied -->
+                <div class="ca-application-banner" id="ca-not-applied">
+                    <h3>Become a Campus Ambassador!</h3>
+                    <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        Represent 10th NCJ at your institution and earn exclusive perks.
+                    </p>
+                    <a href="ca-register.html" class="button is-primary is-large">
+                        <strong>Apply to be a CA</strong>
+                    </a>
+                </div>
+
+                <!-- If applied and approved (commented out by default) -->
+                <!-- 
+        <div class="ca-application-banner">
+          <h3>CA Application Status</h3>
+          <div style="margin-top: 1.5rem;">
+            <span class="badge approved" style="font-size: 1rem;">Approved</span>
+          </div>
+          <div class="ca-code-display">
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0.5rem;">Your CA Code:</p>
+            <div class="ca-code">NCJ-CA-2026-001</div>
+          </div>
+        </div>
+        -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="change-password.html">Change Password</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>

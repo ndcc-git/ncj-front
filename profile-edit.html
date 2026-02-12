@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Edit your profile - 10th NCJ">
+    <title>Edit Profile - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/images/logo.png" alt="10th NCJ Logo">
+                </a>
+            </div>
+
+            <div class="navbar-end" style="margin-right: 1rem;">
+                <div class="navbar-item">
+                    <div class="navbar-auth-group auth-logged-in active">
+                        <a class="navbar-profile-link" href="profile.html">
+                            <i class="fas fa-user-circle"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a class="button is-outlined-custom" onclick="handleLogout()">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       EDIT PROFILE SECTION
+       ======================================== -->
+    <section class="section" style="padding: 3rem 1.5rem;">
+        <div class="container">
+            <div class="columns is-centered">
+                <div class="column is-10-tablet is-8-desktop">
+                    <h1 class="auth-card-title">Edit Your Profile</h1>
+                    <p class="auth-card-subtitle">Update your personal information</p>
+
+                    <div class="auth-card" style="max-width: none;">
+                        <form class="auth-form" id="edit-profile-form">
+                            <div class="columns is-multiline">
+                                <!-- Full Name -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-user"></i> Full Name *</label>
+                                        <div class="control">
+                                            <input class="input" type="text" id="edit-fullname"
+                                                placeholder="Enter your full name" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Institution -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-school"></i> Institution *</label>
+                                        <div class="control">
+                                            <input class="input" type="text" id="edit-institution"
+                                                placeholder="Your institution" list="institutions" required>
+                                            <datalist id="institutions">
+                                                <option value="Notre Dame College">
+                                                <option value="Dhaka College">
+                                                <option value="Adamjee Cantonment College">
+                                                <option value="Viqarunnisa Noon School and College">
+                                                <option value="Other">
+                                            </datalist>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Class -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-graduation-cap"></i> Class *</label>
+                                        <div class="control">
+                                            <div class="select is-fullwidth">
+                                                <select id="edit-class" required>
+                                                    <option value="">Select class</option>
+                                                    <option value="1">Class 1</option>
+                                                    <option value="2">Class 2</option>
+                                                    <option value="3">Class 3</option>
+                                                    <option value="4">Class 4</option>
+                                                    <option value="5">Class 5</option>
+                                                    <option value="6">Class 6</option>
+                                                    <option value="7">Class 7</option>
+                                                    <option value="8">Class 8</option>
+                                                    <option value="9">Class 9</option>
+                                                    <option value="10">Class 10</option>
+                                                    <option value="11">Class 11</option>
+                                                    <option value="12">Class 12</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Mobile -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-phone"></i> Mobile *</label>
+                                        <div class="control">
+                                            <input class="input" type="tel" id="edit-mobile" placeholder="01XXXXXXXXX"
+                                                pattern="[0-9]{11}" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Address -->
+                                <div class="column is-12">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-map-marker-alt"></i> Address *</label>
+                                        <div class="control">
+                                            <input class="input" type="text" id="edit-address"
+                                                placeholder="Your address" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Email (Read-only) -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fas fa-envelope"></i> Email *</label>
+                                        <div class="control">
+                                            <input class="input" type="email" id="edit-email"
+                                                placeholder="your@email.com" required>
+                                        </div>
+                                        <p class="help">Email cannot be changed for security reasons</p>
+                                    </div>
+                                </div>
+
+                                <!-- Facebook Link -->
+                                <div class="column is-6">
+                                    <div class="field">
+                                        <label class="label"><i class="fab fa-facebook"></i> Facebook Profile</label>
+                                        <div class="control">
+                                            <input class="input" type="url" id="edit-facebook"
+                                                placeholder="https://facebook.com/yourprofile">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons - Medium Size -->
+                            <div class="field is-grouped is-grouped-centered" style="margin-top: 2rem;">
+                                <div class="control">
+                                    <button type="submit" class="button is-primary is-medium">
+                                        <strong>Save Changes</strong>
+                                    </button>
+                                </div>
+                                <div class="control">
+                                    <a href="profile.html" class="button is-outlined-custom is-medium">
+                                        Cancel
+                                    </a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="profile.html">My Profile</a></li>
+                        <li><a href="change-password.html">Change Password</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+    <script>
+        // Pre-fill form with existing user data from localStorage
+        document.addEventListener('DOMContentLoaded', () => {
+            const user = localStorage.getItem('ncj_user');
+            if (user) {
+                const userData = JSON.parse(user);
+                document.getElementById('edit-fullname').value = userData.fullname || '';
+                document.getElementById('edit-institution').value = userData.institution || '';
+                document.getElementById('edit-class').value = userData.class || '';
+                document.getElementById('edit-mobile').value = userData.mobile || '';
+                document.getElementById('edit-address').value = userData.address || '';
+                document.getElementById('edit-email').value = userData.email || '';
+                document.getElementById('edit-facebook').value = userData.facebook || '';
+
+                // Make email readonly
+                document.getElementById('edit-email').readOnly = true;
+            }
+
+            // Handle form submission
+            document.getElementById('edit-profile-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+
+                // Update user data
+                const updatedUser = {
+                    fullname: document.getElementById('edit-fullname').value,
+                    institution: document.getElementById('edit-institution').value,
+                    class: document.getElementById('edit-class').value,
+                    mobile: document.getElementById('edit-mobile').value,
+                    address: document.getElementById('edit-address').value,
+                    email: document.getElementById('edit-email').value,
+                    facebook: document.getElementById('edit-facebook').value,
+                };
+
+                // Save to localStorage
+                localStorage.setItem('ncj_user', JSON.stringify(updatedUser));
+
+                alert('Profile updated successfully!');
+                window.location.href = 'profile.html';
+            });
+        });
+    </script>
+
+</body>
+
+</html>

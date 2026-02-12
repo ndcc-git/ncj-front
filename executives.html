@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Meet the Executive Team of 10th NCJ">
+    <title>Executives - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/images/logo.png" alt="10th NCJ Logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="executives.html">Executives</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="navbar-auth-group auth-guest" id="auth-guest">
+                            <a class="button is-text-link" href="signin.html">Sign In</a>
+                            <a class="button is-primary" href="signup.html">
+                                <strong>Sign Up</strong>
+                            </a>
+                        </div>
+
+                        <div class="navbar-auth-group auth-logged-in" id="auth-logged-in">
+                            <a class="navbar-profile-link" href="profile.html">
+                                <i class="fas fa-user-circle"></i>
+                                <span>My Profile</span>
+                            </a>
+                            <a class="button is-outlined-custom" onclick="handleLogout()">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       PAGE HEADER
+       ======================================== -->
+    <section class="section" style="padding-top: 4rem;">
+        <div class="container">
+            <h1 class="section-title">Executive Team</h1>
+            <p class="has-text-centered" style="max-width: 700px; margin: 0 auto 3rem; color: var(--text-secondary);">
+                Meet the dedicated leaders who make the 10th NCJ possible.
+            </p>
+        </div>
+    </section>
+
+    <!-- ========================================
+       ADMINISTRATION DEPARTMENT
+       ======================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-department-title">Administration</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Admin Name</h3>
+                    <p class="team-card-role">Chief Executive</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Admin Name</h3>
+                    <p class="team-card-role">Vice President</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Admin Name</h3>
+                    <p class="team-card-role">General Secretary</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       CULTURAL AFFAIRS DEPARTMENT
+       ======================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-department-title">Cultural Affairs</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Cultural Head</h3>
+                    <p class="team-card-role">Cultural Secretary</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Event Coordinator</h3>
+                    <p class="team-card-role">Events Manager</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Program Director</h3>
+                    <p class="team-card-role">Stage Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       IT & TECH DEPARTMENT
+       ======================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-department-title">IT & Technology</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">IT Head</h3>
+                    <p class="team-card-role">Technology Lead</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Web Manager</h3>
+                    <p class="team-card-role">Digital Platforms</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       LOGISTICS DEPARTMENT
+       ======================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-department-title">Logistics & Operations</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Logistics Head</h3>
+                    <p class="team-card-role">Operations Manager</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Venue Coordinator</h3>
+                    <p class="team-card-role">Facilities Manager</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       MARKETING DEPARTMENT
+       ======================================== -->
+    <section class="team-section">
+        <div class="container">
+            <h2 class="team-department-title">Marketing & Outreach</h2>
+            <div class="team-grid">
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Marketing Head</h3>
+                    <p class="team-card-role">Brand Manager</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Social Media Lead</h3>
+                    <p class="team-card-role">Digital Marketing</p>
+                </div>
+                <div class="team-card">
+                    <div class="team-card-image-wrapper">
+                        <img src="C:/Users/Faridin/.gemini/antigravity/brain/5dfe2dd8-9f9b-4ae9-8e01-061f4f665677/team_member_placeholder_1770903290922.png"
+                            alt="Team Member" class="team-card-image">
+                    </div>
+                    <h3 class="team-card-name">Content Creator</h3>
+                    <p class="team-card-role">Creative Team</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+       FOOTER
+       ======================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-4">
+                    <h3 class="footer-title">10th NCJ</h3>
+                    <p>Notre Dame Cultural Junction - Celebrating 10 years of cultural excellence.</p>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="executives.html">Executives</a></li>
+                        <li><a href="developers.html">Developers</a></li>
+                    </ul>
+                </div>
+
+                <div class="column is-4">
+                    <h3 class="footer-title">Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2026 Notre Dame Cultural Club. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

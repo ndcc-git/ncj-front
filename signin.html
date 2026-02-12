@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to your 10th NCJ account">
+    <title>Sign In - 10th NCJ</title>
+
+    <!-- Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+    <!-- ========================================
+       NAVIGATION BAR
+       ======================================== -->
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="index.html">
+                    <img src="assets/images/logo.png" alt="10th NCJ Logo">
+                </a>
+
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="index.html#about">About</a>
+                    <a class="navbar-item" href="gallery.html">Gallery</a>
+                    <a class="navbar-item" href="executives.html">Executives</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
+                </div>
+
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="navbar-auth-group auth-guest" id="auth-guest">
+                            <a class="button is-text-link" href="signin.html">Sign In</a>
+                            <a class="button is-primary" href="signup.html">
+                                <strong>Sign Up</strong>
+                            </a>
+                        </div>
+
+                        <div class="navbar-auth-group auth-logged-in" id="auth-logged-in">
+                            <a class="navbar-profile-link" href="profile.html">
+                                <i class="fas fa-user-circle"></i>
+                                <span>My Profile</span>
+                            </a>
+                            <a class="button is-outlined-custom" onclick="handleLogout()">
+                                Logout
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========================================
+       SIGN IN SECTION - Centered Card
+       ======================================== -->
+    <div class="auth-centered-container">
+        <div class="auth-card">
+            <h1 class="auth-card-title">Welcome Back</h1>
+            <p class="auth-card-subtitle">Sign in to your account</p>
+
+            <form class="auth-form" id="signin-form">
+                <!-- Email -->
+                <div class="field">
+                    <label class="label"><i class="fas fa-envelope"></i> Email</label>
+                    <div class="control">
+                        <input class="input" type="email" id="signin-email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+
+                <!-- Password -->
+                <div class="field">
+                    <label class="label"><i class="fas fa-lock"></i> Password</label>
+                    <div class="control password-toggle">
+                        <input class="input" type="password" id="signin-password" placeholder="Enter your password"
+                            required>
+                        <span class="toggle-icon" onclick="togglePasswordVisibility('signin-password')">
+                            <i class="fas fa-eye"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Remember Me & Forgot Password -->
+                <div class="field" style="display: flex; justify-content: space-between; align-items: center;">
+                    <label class="checkbox">
+                        <input type="checkbox" id="remember-me">
+                        Remember me
+                    </label>
+                    <a href="forgot-password.html" style="color: var(--primary-accent);">Forgot Password?</a>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="field" style="margin-top: 2rem;">
+                    <div class="control">
+                        <button type="submit" class="button is-primary is-fullwidth is-medium">
+                            <strong>Sign In</strong>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Footer Link -->
+                <div class="auth-footer-link">
+                    Don't have an account? <a href="signup.html">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/auth.js"></script>
+
+</body>
+
+</html>
