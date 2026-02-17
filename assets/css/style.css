@@ -48,7 +48,7 @@ body {
   color: var(--text-primary);
   line-height: 1.6;
   overflow-x: hidden;
-  padding-top: 80px;
+  padding-top: 100px;
   /* Account for fixed navbar */
 }
 
@@ -96,8 +96,8 @@ h6 {
 
 .navbar-item:hover,
 .navbar-item:focus {
-  color: var(--secondary-accent);
-  background-color: transparent;
+  color: var(--secondary-accent) !important;
+  background-color: transparent !important;
 }
 
 .navbar-burger {
@@ -136,6 +136,7 @@ h6 {
 /* ========================================
    Hero Section
    ======================================== */
+/* Hero Section */
 .hero-section {
   min-height: 90vh;
   display: flex;
@@ -143,7 +144,26 @@ h6 {
   justify-content: center;
   position: relative;
   overflow: hidden;
+
+  margin-top: -100px;
+  padding-top: calc(4rem + 100px);
+  padding-bottom: 4rem;
+
+  background:
+    /* Soft fade to bg color */
+    linear-gradient(to bottom,
+      rgba(255, 252, 240, 0) 80%,
+      var(--secondary-accent) 100%),
+
+    /* Light dim overlay */
+    linear-gradient(rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+
+    url('https://scontent.fdac138-1.fna.fbcdn.net/v/t1.15752-9/625017675_1676003873808809_1228699986677235644_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=9f807c&_nc_ohc=M6UpzngEzEwQ7kNvwH_BHTI&_nc_oc=AdmsFzRvEv1pTNlWT_ytHHtsaRZrg3Y9HlW7-DiusdumFNs4Ys5gLTpPrYa8QOyNsE4&_nc_zt=23&_nc_ht=scontent.fdac138-1.fna&oh=03_Q7cD4gHBvIBQg6ZgNp5j4n26-5gPHPwGP7D3eYDxyznrPUpejA&oe=69BBBF35') center center / cover no-repeat;
+
+  background-color: #FFFCF0;
 }
+
 
 .hero-title {
   font-size: 6rem;
@@ -151,6 +171,7 @@ h6 {
   letter-spacing: -0.02em;
   line-height: 1;
   margin-bottom: 1rem;
+  color: var(--bg-primary);
 }
 
 .hero-artwork {
@@ -197,13 +218,14 @@ h6 {
 .hero-info-value {
   font-size: 1.75rem;
   font-weight: 600;
-  color: var(--text-primary);
+  color: var(--bg-primary);
 }
 
 .hero-info-divider {
   width: 2px;
   height: 60px;
-  background: linear-gradient(to bottom, transparent, var(--tertiary-accent), transparent);
+  /* background: linear-gradient(to bottom, transparent, var(--tertiary-accent), transparent); */
+  background-color: var(--tertiary-accent);
   align-self: center;
 }
 
@@ -214,9 +236,24 @@ h6 {
     text-align: center;
   }
 
+  /* Mobile Hero Center and Resize */
+  .hero-artwork {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .hero-artwork img {
+    max-width: 90% !important;
+    /* Make bigger on mobile */
+    margin: 0 auto;
+  }
+
   .hero-section {
     min-height: auto;
     padding: 3rem 0;
+    padding-top: calc(3rem + 120px) !important;
+    /* Extra padding on mobile to clear navbar */
   }
 
   .hero-event-info {
@@ -236,12 +273,24 @@ h6 {
   }
 }
 
+/* Adjust button colors for dark hero */
+.hero-section .button.is-outlined-custom {
+  border-color: var(--bg-primary);
+  color: var(--bg-primary);
+}
+
+.hero-section .button.is-outlined-custom:hover {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border-color: var(--bg-primary);
+}
+
 /* ========================================
    Countdown Timer
    ======================================== */
 .countdown-section {
-  padding: 5rem 0;
-  background: linear-gradient(to bottom, var(--bg-primary) 0%, var(--bg-primary) 8%, var(--primary-accent) 25%, var(--secondary-accent) 75%, var(--bg-primary) 92%, var(--bg-primary) 100%);
+  padding: 0 0 5rem 0;
+  background: linear-gradient(to bottom, var(--secondary-accent) 0%, var(--secondary-accent) 8%, var(--secondary-accent) 25%, var(--secondary-accent) 75%, var(--bg-primary) 92%, var(--bg-primary) 100%);
 }
 
 .countdown-container {
@@ -748,106 +797,234 @@ h6 {
    Responsive Adjustments
    ======================================== */
 @media screen and (max-width: 768px) {
-
-  /* Hero Section Mobile */
-  .hero-section .columns {
-    flex-direction: column-reverse;
-  }
-
-  .hero-section .column {
-    text-align: center;
-  }
-
-  .hero-artwork {
-    margin-bottom: 2rem;
-  }
-
-  .hero-section .buttons {
-    justify-content: center;
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  /* Countdown */
-  .countdown-card {
-    padding: 1.5rem 2rem;
-    min-width: 100px;
-  }
-
-  .countdown-number {
-    font-size: 2.5rem;
-  }
-
-  /* FAQ Section Mobile */
-  .faq-section .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .faq-item {
-    margin-bottom: 1rem;
-  }
-
-  /* Contact Form Mobile */
-  .contact-section .column {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  .map-container {
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-  }
-
-  /* Footer Mobile */
-  .footer {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-
-  /* Event Details Mobile */
   .event-hero-content {
     flex-direction: column;
-    padding-left: 1rem;
-    padding-right: 1rem;
   }
 
-  .event-hero-image,
-  .event-hero-info {
-    margin-bottom: 2rem;
+  .event-actions {
+    flex-direction: column;
   }
 
-  .event-title {
-    font-size: 2rem;
+  .event-actions .button {
+    width: 100%;
+  }
+}
+
+/* ========================================
+   Flush Notifications (Toast Alerts)
+   ======================================== */
+.notification-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  pointer-events: none;
+  /* Allow clicks to pass through container */
+}
+
+.flush-alert {
+  background: white;
+  border-left: 5px solid var(--tertiary-accent);
+  padding: 1rem 1.5rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-width: 300px;
+  max-width: 400px;
+  pointer-events: auto;
+  /* Enable clicks on alerts */
+  transform: translateX(100%);
+  animation: slideIn 0.3s forwards, fadeOut 0.5s 3.5s forwards;
+  /* Auto fade out fallback */
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.flush-alert.is-hiding {
+  transform: translateX(110%);
+  opacity: 0;
+}
+
+.flush-alert-icon {
+  font-size: 1.5rem;
+}
+
+.flush-alert-content {
+  flex: 1;
+}
+
+.flush-alert-title {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+}
+
+.flush-alert-message {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+/* Success Variant */
+.flush-alert.is-success {
+  border-left-color: #2E7D32;
+  /* Green */
+}
+
+.flush-alert.is-success .flush-alert-icon {
+  color: #2E7D32;
+}
+
+/* Warning Variant */
+.flush-alert.is-warning {
+  border-left-color: #F9A825;
+  /* Yellow/Gold */
+}
+
+.flush-alert.is-warning .flush-alert-icon {
+  color: #F9A825;
+}
+
+/* Error Variant */
+.flush-alert.is-error {
+  border-left-color: #C62828;
+  /* Red */
+}
+
+.flush-alert.is-error .flush-alert-icon {
+  color: #C62828;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
   }
 
-  .event-info-section .columns {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  to {
+    transform: translateX(0);
   }
+}
 
-  .event-info-section .column {
-    margin-bottom: 2rem;
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
   }
+}
 
-  /* Buttons Mobile */
-  .button {
-    font-size: 0.9rem;
-    padding: 0.5rem 1rem;
-  }
+/* Hero Section Mobile */
+.hero-section .columns {
+  flex-direction: column-reverse;
+}
 
-  .button.is-large {
-    font-size: 1rem;
-    padding: 0.75rem 1.5rem;
-  }
+.hero-section .column {
+  text-align: center;
+}
 
-  /* Gallery Mobile */
-  .gallery-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1rem;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
+.hero-artwork {
+  margin-bottom: 2rem;
+}
+
+.hero-section .buttons {
+  justify-content: center;
+  margin-left: 0;
+  margin-right: 0;
+  flex-direction: row;
+  /* Ensure row layout */
+  gap: 0.5rem;
+  /* Add specific gap */
+}
+
+.hero-section .button {
+  margin-bottom: 0 !important;
+  /* Override bulma default if any */
+}
+
+/* Countdown */
+.countdown-card {
+  padding: 1.5rem 2rem;
+  min-width: 100px;
+}
+
+.countdown-number {
+  font-size: 2.5rem;
+}
+
+/* FAQ Section Mobile */
+.faq-section .container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+/* Contact Form Mobile */
+.contact-section .column {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.map-container {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* Footer Mobile */
+.footer {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+/* Event Details Mobile */
+.event-hero-content {
+  flex-direction: column;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.event-hero-image,
+.event-hero-info {
+  margin-bottom: 2rem;
+}
+
+.event-title {
+  font-size: 2rem;
+}
+
+.event-info-section .columns {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.event-info-section .column {
+  margin-bottom: 2rem;
+}
+
+/* Buttons Mobile */
+.button {
+  font-size: 0.9rem;
+  padding: 0.5rem 1rem;
+}
+
+.button.is-large {
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Gallery Mobile */
+.gallery-grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
 }
 
 /* ========================================
@@ -1705,6 +1882,10 @@ h6 {
   overflow: hidden;
   max-width: 100%;
   width: 100%;
+  /* Fix text alignment */
+  line-height: normal;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
 
 .auth-form .input:focus,
@@ -2005,7 +2186,9 @@ h6 {
 .team-card {
   background: white;
   border-radius: var(--border-radius-card);
-  padding: 2rem 1.5rem;
+  padding: 0;
+  /* Remove padding globally */
+  padding-bottom: 1.5rem;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform var(--transition-speed), box-shadow var(--transition-speed);
@@ -2013,6 +2196,8 @@ h6 {
   text-decoration: none;
   display: block;
   color: inherit;
+  overflow: hidden;
+  /* Contain image */
 }
 
 .team-card:hover {
@@ -2022,13 +2207,29 @@ h6 {
 
 .team-card-image-wrapper {
   margin-bottom: 1.25rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 300px;
+  /* Removed border radius */
+}
+
+.team-card-image-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(to bottom, transparent 0%, white 100%);
+  pointer-events: none;
 }
 
 .team-card-image {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  border: 4px solid var(--primary-accent);
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+  border: none;
   object-fit: cover;
   transition: transform var(--transition-speed);
 }
@@ -2037,17 +2238,11 @@ h6 {
   transform: scale(1.05);
 }
 
-.team-card-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
-.team-card-role {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  margin-bottom: 1rem;
+.team-card-name,
+.team-card-role,
+.team-card-social {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .team-card-social {
@@ -2147,6 +2342,7 @@ h6 {
   gap: 1rem;
 }
 
+/* Navbar Profile Link - Mobile Fixes */
 .navbar-profile-link {
   display: flex;
   align-items: center;
@@ -2181,6 +2377,26 @@ h6 {
   display: flex;
 }
 
+@media screen and (max-width: 1023px) {
+  .navbar-auth-group {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+
+  .auth-guest,
+  .auth-logged-in,
+  .auth-logged-in.active {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-profile-link {
+    margin-bottom: 0.5rem;
+  }
+}
+
 /* ========================================
    Responsive Adjustments for New Pages
    ======================================== */
@@ -2195,7 +2411,7 @@ h6 {
   }
 
   .auth-form-panel {
-    padding: 2rem 1rem;
+    padding: 2rem 1.5rem;
   }
 
   .auth-card {
@@ -2203,7 +2419,10 @@ h6 {
   }
 
   .profile-header {
-    padding: 2rem 0;
+    padding: 1rem 1.5rem 2rem;
+    /* Reduced top padding, added side padding */
+    margin-top: -20px;
+    /* Pull up to reduce gap from body padding */
   }
 
   .profile-section {
@@ -2211,18 +2430,43 @@ h6 {
   }
 
   .team-grid {
-    grid-template-columns: repeat(auto-fit, minmax(160px, 200px));
-    gap: 1.5rem;
+    grid-template-columns: 1fr;
+    /* 1 card per row */
+    gap: 2rem;
     justify-content: center;
+    padding: 0 1rem;
   }
 
+  /* Mobile Team Card Style - Adjustments */
   .team-card {
-    padding: 1.5rem 1rem;
+    max-width: 280px;
+    /* Decrease card size on mobile */
+    margin: 0 auto;
   }
 
-  .team-card-image {
-    width: 120px;
-    height: 120px;
+  .team-card-image-wrapper {
+    height: 250px;
+    /* Slightly smaller height on mobile */
+  }
+
+  .team-card-image-wrapper::after {
+    /* Ensure gradient matches card bg (white) */
+    background: linear-gradient(to bottom, transparent 0%, white 100%);
+  }
+
+  /* Team Card Content */
+  .team-card-name,
+  .team-card-role,
+  .team-card-social {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  /* Mobile Hero Buttons */
+  .hero-section .button.is-medium {
+    font-size: 0.9rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
   }
 
   .utility-icon {
@@ -2268,7 +2512,7 @@ h6 {
   }
 
   .hero-section .hero-artwork img {
-    max-width: 300px !important;
+    max-width: 350px !important;
   }
 
   /* Contact section consistent margins */

@@ -313,3 +313,95 @@ function previewImage(inputElement, previewElement) {
     reader.readAsDataURL(inputElement.files[0]);
   }
 }
+
+// ========================================
+// Flush Notification System
+// ========================================
+const NotificationSystem = {
+  container: null,
+
+  init() {
+    // Create container if it doesn't exist
+    if (!document.getElementById('notification-container')) {
+      this.container = document.createElement('div');
+      this.container.id = 'notification-container';
+      this.container.className = 'notification-container';
+      document.body.appendChild(this.container);
+    } else {
+      this.container = document.getElementById('notification-container');
+    }
+  },
+
+  show(message, type = 'success', duration = 3000) {
+    if (!this.container) this.init();
+
+    // Icon mapping (FontAwesome)
+    const icons = {
+      success: 'fa-check-circle',
+      warning: 'fa-exclamation-triangle',
+      error: 'fa-times-circle'
+    };
+
+    // Title mapping
+    const titles = {
+      success: 'Success',
+      warning: 'Warning',
+      error: 'Error'
+    };
+
+    const iconClass = icons[type] || icons.success;
+    const titleText = titles[type] || 'Notification';
+
+    // Create alert element
+    const alert = document.createElement('div');
+    alert.className = `flush-alert is-${type}`;
+    
+    // Add content
+    alert.innerHTML = `
+      <div class="flush-alert-icon">
+        <i class="fas ${iconClass}"></i>
+      </div>
+      <div class="flush-alert-content">
+        <div class="flush-alert-title">${titleText}</div>
+        <div class="flush-alert-message">${message}</div>
+      </div>
+    `;
+
+    // Click to dismiss
+    alert.addEventListener('click', () => {
+      this.dismiss(alert);
+    });
+
+    // Auto Close
+    if (duration > 0) {
+      setTimeout(() => {
+        this.dismiss(alert);
+      }, duration);
+    }
+
+    // Append to container
+    this.container.appendChild(alert);
+  },
+
+  dismiss(alert) {
+    if (alert.classList.contains('is-hiding')) return;
+    
+    alert.classList.add('is-hiding');
+    alert.addEventListener('transitionend', () => {
+      if (alert.parentElement) {
+        alert.remove();
+      }
+    });
+  }
+};
+
+// Initialize Notification System when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  NotificationSystem.init();
+  
+  // Expose to window for easy testing from HTML
+  window.showNotification = (message, type, duration) => {
+    NotificationSystem.show(message, type, duration);
+  };
+});
+
